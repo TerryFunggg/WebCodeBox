@@ -1,0 +1,36 @@
+.navbar {
+    border-bottom: #000 3px solid;
+}
+
+#home-section {
+    color: white;
+    background: url(../img/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 450px;
+}
+
+#home-section .dark-overlay {
+  
+    width: 100%;
+    min-height: 450px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#home-section .home-inner {
+    padding-top: 150px;
+}
+
+
+.welcome{
+    color: #ff5757;
+}
+
+.box{
+    cursor: pointer;
+}
+.box:hover{
+    color: turquoise;
+    text-decoration-line: underline;
+}
