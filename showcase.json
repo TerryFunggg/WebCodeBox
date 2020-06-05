@@ -6,5 +6,9 @@
     {
         "name":"Random meal generator",
         "link":"./Showcase/100_days_100_Project/Day1_Random_meal_generator/index.html"
+    },
+    {
+        "name":"Word Jumping",
+        "link":"./Showcase/Component/jumping_words.html"
     }
 ]
