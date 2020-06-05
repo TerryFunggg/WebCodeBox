@@ -8,14 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-sm navbar-light bg-light ">
+  <!-- Nav bar Start -->
+  <nav class="navbar navbar-expand-sm navbar-light bg-light d-none d-block d-lg-none">
     <div class="container">
-      <a class="navbar-brand" href="#"></a>
+      <a class="navbar-brand text-info" href="#">Terry's Web Code Box</a>
       <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -24,37 +25,89 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Home</a>
           </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Showcase</a>
-            <div class="dropdown-menu">
-              <a href="#" class="dropdown-item">100Days 100Project</a>
-            </div>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Showcase</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">About</a>
           </li>
-
         </ul>
       </div>
     </div>
   </nav>
+  <!-- Nav bar End -->
 
-  <header id="home-section" class="mb-3">
-    <div class="dark-overlay">
-        <div class="home-inner container text-center">
+  <div class="row">
+    <!-- Profile section Start -->
+    <div class="col-lg-2 d-none d-lg-block nav-sidebar">
+      <div class="profile text-white text-center mt-5">
+        <img class="profile_avatar" src="./img/avatar.png">
+        <br>
+        <h4 class="mx-2 my-4"><b>Terry Fung</b></h4>
+        <p class="title mx-2 my-4">Web develop/phper/love emacs</p>
+
+        <div class="m-3">
+          <a href="https://github.com/terryfunggg" target="_blank"><i class="fa fa-github fa-2x text-white"></i></a>
+        </div>
+
+
+        <nav class="nav nav-justified flex-column nav-pills  mt-4 text-secondary" id="v-pills-tab" role="tablist"
+          aria-orientation="vertical" style="margin: 0;padding: 0;">
+          <a class="nav-link text-white active " id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
+            role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+          <a class="nav-link text-white " id="v-pills-showcase-tab" data-toggle="pill" href="#v-pills-showcase" role="tab"
+            aria-controls="v-pills-showcase" aria-selected="false">Showcase</a>
+          <a class="nav-link text-white " id="v-pills-blog-tab" data-toggle="pill" href="#"
+            role="tab" aria-controls="" aria-selected="false">Blog</a>
+          <a class="nav-link text-white " id="v-pills-about-tab" data-toggle="pill" href="#v-pills-about"
+            role="tab" aria-controls="v-pills-about" aria-selected="false">About</a>
+        </nav>
+
+        <!-- <div class="btn-group-vertical mt-4 mx-2 btn-block">
+            <a href="#" class="btn btn-secondary btn-lg">Home</a>
+          <a href="#" class="btn btn-secondary btn-lg">Showcase</a>
+          <a href="#" class="btn btn-secondary btn-lg">Blog</a>
+          <a href="#" class="btn btn-secondary btn-lg">About</a>
+          </div> -->
+      </div>
+
+    </div>
+    <!-- Profile Section END -->
+    <!-- Right section Start -->
+    <div class="col-lg-10 " style="position: relative; margin-left: auto;">
+      <div class="tab-content" id="v-pills-tabContent">
+        <!-- Home Section START -->
+        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+          <header id="home-section" class="mb-3">
+            <div class="dark-overlay">
+              <div class="home-inner container text-center">
                 <h1 class="display-4">Welcome<strong class="welcome">!</strong></h1>
                 <p class="lead">Try to <strong class="text-warning">click</strong> the button below</p>
-                <a id="refresh" class="btn btn-primary btn-lg" href="#" role="button">Refresh</a>
+                <a id="refresh" class="btn btn-info btn-lg" href="#" role="button">Refresh</a>
+              </div>
+            </div>
+          </header>
+          <!-- Showcase START -->
+          <div class="container">
+            <div id="showcases" class="row row-cols-1">
+            </div>
+          </div>
+          <!-- Showcase END -->
         </div>
+        <!-- Home Section END -->
+      </div>
+      <!-- Right section END -->
     </div>
-</header>
+  </div>
 
-    <!-- Showcase -->
-    <div class="container">
-    <div id="showcases" class="row row-cols-1 row-cols-md-2">
-    </div>
-</div>
-<!-- Showcase END -->
+
+  <footer id="footer">
+    <p> &copy; <strong id="year"></strong></p>
+  </footer>
 
 
 

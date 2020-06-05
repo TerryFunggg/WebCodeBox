@@ -7,6 +7,8 @@ const SHOWCASE_LIMIT = 4;
 const showcases_box = document.getElementById("showcases");
 fetchShowcase();
 
+// Get footer year
+document.getElementById('year').innerHTML = new Date().getFullYear();
 
 document.getElementById("refresh").addEventListener("click", function (e) {
     alert("Sorry! Still developing");

@@ -34,3 +34,41 @@
     color: turquoise;
     text-decoration-line: underline;
 }
+
+.profile{
+    margin-top: 10px;
+}
+.profile .profile_avatar{
+    width:100px;
+    height: 100px;
+    margin: 5px;
+    border: 0;
+    border-radius: 50%;
+}
+
+.profile .title{
+    padding: 5px;
+}
+
+
+#footer{
+    margin: 0;
+    background: rgb(75, 75, 75);
+    color: #fff;
+    text-align: center;
+}
+
+#footer p {
+    margin: 0;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #7daaff!important;
+}
+
+.nav-sidebar{
+position: fixed;
+height: 100%;
+    background-color: rgb(75, 75, 75);
+    padding:0px;
+}
