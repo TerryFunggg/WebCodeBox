@@ -1,5 +1,8 @@
 try {
     (async function () {
+         var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        if(isSafari) alert("For some technique problrem. You may need to use Google Chrome to open this app.")
+
         const musicContainer = document.getElementById("music_container");
 
         const playBtn = document.getElementById("play");
