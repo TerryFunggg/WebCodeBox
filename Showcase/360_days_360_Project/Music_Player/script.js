@@ -1,34 +1,36 @@
-try {
-    (async function () {
-         var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-        if(isSafari) alert("For some technique problrem. You may need to use Google Chrome to open this app.")
+(async function () {
+    var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    if (isSafari)
+        alert(
+            "For some technique problrem. You may need to use Google Chrome to open this app."
+        );
 
-        const musicContainer = document.getElementById("music_container");
+    const musicContainer = document.getElementById("music_container");
+    const playBtn = document.getElementById("play");
+    const prevBtn = document.getElementById("prev");
+    const nextBtn = document.getElementById("next");
 
-        const playBtn = document.getElementById("play");
-        const prevBtn = document.getElementById("prev");
-        const nextBtn = document.getElementById("next");
+    const audio = document.getElementById("audio");
+    const progress = document.getElementById("progress");
+    const progressContainer = document.getElementById("progress_container");
 
-        const audio = document.getElementById("audio");
-        const progress = document.getElementById("progress");
-        const progressContainer = document.getElementById("progress_container");
+    const title = document.getElementById("title");
+    const cover = document.getElementById("cover");
 
-        const title = document.getElementById("title");
-        const cover = document.getElementById("cover");
+    // song title
+    let songs = [];
 
-        // song title
-        let songs = [];
+    //keep track of song
+    let songIndex = +0;
 
-        //keep track of song
-        let songIndex = +0;
+    await fetchPlayList();
 
-        await fetchPlayList();
+    // Initially load song details into DOM
+    await loadSong(songs[songIndex]);
 
-        // Initially load song details into DOM
-        await loadSong(songs[songIndex]);
-
-        // fetch playlist
-        async function fetchPlayList() {
+    // fetch playlist
+    async function fetchPlayList() {
+        try {
             let json = await fetch(
                 "https://api.imjad.cn/cloudmusic/?type=playlist&id=2073101707"
             );
@@ -38,10 +40,16 @@ try {
             );
             const playList_two = await json.json();
             songs = [...playList_one.privileges, ...playList_two.privileges];
+        } catch (e) {
+            alert(
+                "Sorry, the Api server have some error. Please wait a minute"
+            );
         }
+    }
 
-        // update song details
-        async function loadSong(song) {
+    // update song details
+    async function loadSong(song) {
+        
             const detail_json = await fetch(
                 `https://api.imjad.cn/cloudmusic/?type=detail&id=${song.id}`
             );
@@ -54,83 +62,81 @@ try {
             title.innerText = detail.songs[0].al.name || "";
             audio.src = music.data[0].url || "";
             cover.src = detail.songs[0].al.picUrl || "";
+       
+    }
+
+    function playSong() {
+        musicContainer.classList.add("play");
+        playBtn.querySelector("i.fas").classList.remove("fa-play");
+        playBtn.querySelector("i.fas").classList.add("fa-pause");
+
+        audio.play();
+    }
+
+    function pauseSong() {
+        musicContainer.classList.remove("play");
+        playBtn.querySelector("i.fas").classList.add("fa-play");
+        playBtn.querySelector("i.fas").classList.remove("fa-pause");
+
+        audio.pause();
+    }
+
+    async function prevSong() {
+        if (--songIndex < 0) {
+            songIndex = songs.length - 1;
         }
 
-        function playSong() {
-            musicContainer.classList.add("play");
-            playBtn.querySelector("i.fas").classList.remove("fa-play");
-            playBtn.querySelector("i.fas").classList.add("fa-pause");
+        await loadSong(songs[songIndex]);
+        playSong();
+    }
 
-            audio.play();
+    async function nextSong() {
+        if (++songIndex > songs.length - 1) {
+            songIndex = 0;
         }
 
-        function pauseSong() {
-            musicContainer.classList.remove("play");
-            playBtn.querySelector("i.fas").classList.add("fa-play");
-            playBtn.querySelector("i.fas").classList.remove("fa-pause");
+        await loadSong(songs[songIndex]);
+        playSong();
+    }
 
-            audio.pause();
-        }
+    // Update progress bar
+    function updateProgress(e) {
+        const { duration, currentTime } = e.srcElement;
+        const precent = (currentTime / duration) * 100;
+        progress.style.width = `${precent}%`;
+    }
 
-        function prevSong() {
-            if (--songIndex < 0) {
-                songIndex = songs.length - 1;
-            }
+    function setProgress(e) {
+        // get total width of progress bar
+        const width = this.clientWidth;
+        // get User click x position
+        const clickX = e.offsetX;
+        const duration = audio.duration;
 
-            loadSong(songs[songIndex]);
+        audio.currentTime = (clickX / width) * duration;
+    }
+
+    // Event listeners
+    playBtn.addEventListener("click", () => {
+        const isPlaying = musicContainer.classList.contains("play");
+
+        if (isPlaying) {
+            pauseSong();
+        } else {
             playSong();
         }
+    });
 
-        function nextSong() {
-            if (++songIndex > songs.length - 1) {
-                songIndex = 0;
-            }
+    // Change song
+    prevBtn.addEventListener("click", prevSong);
+    nextBtn.addEventListener("click", nextSong);
 
-            loadSong(songs[songIndex]);
-            playSong();
-        }
+    //Click progress bar
+    progressContainer.addEventListener("click", setProgress);
 
-        // Update progress bar
-        function updateProgress(e) {
-            const { duration, currentTime } = e.srcElement;
-            const precent = (currentTime / duration) * 100;
-            progress.style.width = `${precent}%`;
-        }
+    // Time/song update
+    audio.addEventListener("timeupdate", updateProgress);
 
-        function setProgress(e) {
-            // get total width of progress bar
-            const width = this.clientWidth;
-            // get User click x position
-            const clickX = e.offsetX;
-            const duration = audio.duration;
-
-            audio.currentTime = (clickX / width) * duration;
-        }
-
-        // Event listeners
-        playBtn.addEventListener("click", () => {
-            const isPlaying = musicContainer.classList.contains("play");
-
-            if (isPlaying) {
-                pauseSong();
-            } else {
-                playSong();
-            }
-        });
-
-        // Change song
-        prevBtn.addEventListener("click", prevSong);
-        nextBtn.addEventListener("click", nextSong);
-
-        //Click progress bar
-        progressContainer.addEventListener("click", setProgress);
-
-        // Time/song update
-        audio.addEventListener("timeupdate", updateProgress);
-
-        // when Song ends change to next song
-        audio.addEventListener("ended", nextSong);
-    })();
-} catch (e) {
-    alert("sorry.Please wait a moment.Api server have some problem");
-}
+    // when Song ends change to next song
+    audio.addEventListener("ended", nextSong);
+})();
