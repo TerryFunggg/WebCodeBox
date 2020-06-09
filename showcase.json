@@ -6,5 +6,9 @@
     {
         "name":"Word Jumping",
         "link":"./Showcase/Component/jumping_words.html"
+    },
+    {
+        "name":"Lofi Music Player",
+        "link":"./Showcase/360_days_360_Project/Music_Player/index.html"
     }
 ]
