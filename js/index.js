@@ -38,7 +38,7 @@ function insertShowcase(showcases) {
         showcases_box.innerHTML += `
                 <div class="col mb-4">
                     <div class="card box">
-                    <iframe style="border:none; width:100%;height:450px;" class="card-img-top "
+                    <iframe style="border:none; width:100%;height:500px;" class="card-img-top "
                     src="${item.link}"></iframe>
                     <div class="card-body">
                         <h4 class="card-title text-center">${item.name}</h4>
