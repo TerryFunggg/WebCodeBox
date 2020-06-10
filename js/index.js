@@ -2,6 +2,7 @@
  * @author: Terry Fung
  * @since: Thursday, 4th June 2020 5:45:22 pm
  */
+
 const SHOWCASE_LIMIT = 4;
 
 const showcases_box = document.getElementById("showcases");
@@ -23,6 +24,7 @@ async function fetchShowcase() {
     const showcases = shuffled.slice(0, SHOWCASE_LIMIT);
 
     insertShowcase(showcases);
+    initTimeLine(data);
 
     const collection = document.getElementsByClassName("card");
    
@@ -44,6 +46,32 @@ function insertShowcase(showcases) {
                     </div>
                 </div>`;
     });
+}
+
+function initTimeLine(data){
+    console.log(data);
+    let list = data.slice()
+    .sort((a,b) => new Date(b.createAt) - new Date(a.createAt));
+    const timeline = document.getElementById("timeline");
+    let html = '';
+
+    for (let index = 0; index < list.length; index++) {
+        let position = 'left';
+        let tag = "info";
+        
+        if(index % 2 == 0) position = 'right'
+        if((list[index].tag).includes('css')) tag = "danger"
+        html += `
+        <div class="timeline-item timeline-item-${position}">
+            <div class="timeline-content">
+                <a href="${list[index].link}"><h4>${list[index].name}</h4></a>
+                <p>post at ${list[index].createAt}</p>
+                <span class="badge badge-${tag}">${list[index].tag}</span>
+            </div>
+        </div>
+        `
+    }
+    timeline.innerHTML = html;
 }
 
 function shuffleItems(data) {
