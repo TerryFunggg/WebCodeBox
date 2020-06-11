@@ -21,7 +21,12 @@
     {
         "name":"Neon Light",
         "link":"./Showcase/Component/neon_light.html",
-        "createAt":"2020-06-010",
+        "createAt":"2020-06-10",
         "tag":"css anim"
+    },{
+        "name":"Hangman Game",
+        "link":"./Showcase/Hangman/index.html",
+        "createAt":"2020-06-11",
+        "tag":"project"
     }
 ]

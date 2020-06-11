@@ -12,7 +12,8 @@ fetchShowcase();
 document.getElementById('year').innerHTML = new Date().getFullYear();
 
 document.getElementById("refresh").addEventListener("click", function (e) {
-    alert("Sorry! Still developing");
+    showcases_box.innerHTML = '';
+    fetchShowcase();
 });
 
 async function fetchShowcase() {
