@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Word - Hello World</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #262626;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 80vh;
+            overflow: hidden;
+            color: #fff;
+        }
+
+        .container {
+            position: relative;
+            margin: auto;
+        }
+
+        ul {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            transform: translate(-50%, -50%);
+        }
+
+        ul li {
+            list-style: none;
+            color: #484848;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 5em;
+            letter-spacing: 15px;
+            animation: animate 1.4s linear infinite;
+        }
+
+        ul:nth-of-type(1) li:nth-child(1) {
+            animation-delay: .2s;
+        }
+
+        ul:nth-of-type(1) li:nth-child(2) {
+            animation-delay: .4s;
+        }
+
+        ul:nth-of-type(1) li:nth-child(3) {
+            animation-delay: .6s;
+        }
+
+        ul:nth-of-type(1) li:nth-child(4) {
+            animation-delay: .8s;
+        }
+
+        ul:nth-of-type(1) li:nth-child(5) {
+            animation-delay: 1.0s;
+        }
+
+        ul:nth-of-type(2) li:nth-child(1) {
+            animation-delay: 1.2s;
+        }
+
+        ul:nth-of-type(2) li:nth-child(2) {
+            animation-delay: 1.4s;
+        }
+
+        ul:nth-of-type(2) li:nth-child(3) {
+            animation-delay: 1.6s;
+        }
+
+        ul:nth-of-type(2) li:nth-child(4) {
+            animation-delay: 1.8s;
+        }
+
+        ul:nth-of-type(2) li:nth-child(5) {
+            animation-delay: 2.0s;
+        }
+
+        @keyframes animate {
+            0% {
+                color: #484848;
+                text-shadow: none;
+            }
+
+            50% {
+                color: #484848;
+                text-shadow: none;
+            }
+
+            100% {
+                color: #fff900;
+                text-shadow: 0 0 7px #fff900, 0 0 50px #ff6c00;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <li>H</li>
+            <li>E</li>
+            <li>L</li>
+            <li>L</li>
+            <li>O</li>
+        </ul>
+        <br>
+        <ul>
+            <li>W</li>
+            <li>O</li>
+            <li>R</li>
+            <li>L</li>
+            <li>D</li>
+        </ul>
+    </div>
+</body>
+
+</html>

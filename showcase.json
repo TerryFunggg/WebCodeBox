@@ -41,5 +41,11 @@
         "link":"./Showcase/Movie_Selector/index.html",
         "createdAt":"2020-06-13",
         "tag":"project"
+    },
+    {
+        "name":"Flash anim - Hello World",
+        "link":"./Showcase/Component/flash_word.html",
+        "createdAt":"2020-06-14",
+        "tag":"css anim"
     }
 ]
