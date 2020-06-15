@@ -47,5 +47,11 @@
         "link":"./Showcase/Component/flash_word.html",
         "createdAt":"2020-06-14",
         "tag":"css anim"
+    },
+    {
+        "name":"RGB-loading",
+        "link":"./Showcase/Component/RGB_text_effect.html",
+        "createdAt":"2020-06-15",
+        "tag":"css anim"
     }
 ]

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RGB Text Effect</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #262626;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .rgb {
+            padding: 0;
+            margin: auto;
+        }
+
+        .rgb span {
+            margin: 0 -2px;
+            width: 75px;
+            height: 75px;
+            color: #fff;
+            font-size: 60px;
+            text-align: center;
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, .4);
+            animation: animate 2s linear infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                color: #f00;
+                box-shadow: 0 2px 10px rgba(255, 0, 0, 1);
+                border: 1px solid rgba(255, 0, 0, 1);
+            }
+
+            33% {
+                color: #ff0;
+                box-shadow: 0 2px 10px rgba(255, 255, 0, 1);
+                border: 1px solid rgba(255, 255, 0, 1);
+            }
+
+            66% {
+                color: #0f0;
+                box-shadow: 0 2px 10px rgba(0, 255, 0, 1);
+                border: 1px solid rgba(0, 255, 0, 1);
+            }
+
+            100% {
+                color: #f00;
+                box-shadow: 0 2px 10px rgba(255, 0, 0, 1);
+                border: 1px solid rgba(255, 0, 0, 1);
+            }
+        }
+
+        .rgb span:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .rgb span:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .rgb span:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .rgb span:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+
+        .rgb span:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+
+        .rgb span:nth-child(6) {
+            animation-delay: 0.5s;
+        }
+
+        .rgb span:nth-child(7) {
+            animation-delay: 0.6s;
+        }
+
+        @media (max-width: 600px) {
+            .rgb span {
+                width: 40px;
+                height: 40px;
+                font-size: 30px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="rgb">
+        <span>L</span>
+        <span>O</span>
+        <span>A</span>
+        <span>D</span>
+        <span>I</span>
+        <span>N</span>
+        <span>G</span>
+    </div>
+</body>
+
+</html>
