@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Walker</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+    <script>
+        class Walker {
+            constructor(){
+                this.x = width / 2;
+                this.y = height / 2;
+            }
+
+            render(){
+                stroke(255);
+                point(this.x,this.y);
+            }
+
+            step(){
+                const choice = floor(random(4))
+              
+                if(choice == 0){
+                    this.x++;
+                }else if(choice == 1){
+                    this.x--;
+                }else if(choice == 2){
+                    this.y++;
+                }else{
+                    this.y--
+                }
+                this.x = constrain(this.x , 0 , width - 1 );
+                this.y = constrain(this.y , 0 , width - 1 );
+
+            }
+        }
+
+        const numOfWalker = 100;
+        const walkerList = [];
+
+        function setup(){
+            createCanvas(window.innerWidth, window.innerHeight);
+
+            for(let i = 0 ; i < numOfWalker ; i ++){
+                walkerList.push(new Walker());
+            }
+
+            background(0)
+        }
+
+        function draw(){
+            walkerList.forEach(w =>{
+                w.step();
+                w.render();
+            });
+        }
+    </script>
+</body>
+</html>

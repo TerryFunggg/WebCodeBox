@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1D Perlin Noise</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+    <script>
+        var xoffset1 = 0;
+        var xoffset2 = 10000;
+
+        function setup(){
+            createCanvas(window.innerWidth, window.innerHeight);
+        }
+
+        function draw(){
+            background(51);
+
+            var x = map(noise(xoffset1), 0, 1, 0, width)
+            var y = map(noise(xoffset2), 0, 1, 0, height)
+
+            xoffset1 += 0.02;
+            xoffset2 += 0.02;
+
+            ellipse(x , y , 24 ,24)
+        }
+    </script>
+</body>
+</html>
