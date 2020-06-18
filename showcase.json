@@ -65,5 +65,11 @@
         "link":"./Showcase/Component/circle_loading.html",
         "createdAt":"2020-06-17",
         "tag":"css"
+    },
+    {
+        "name":"Distortion effect Landing Page",
+        "link":"./Showcase/GSAP/Sample1/index.html",
+        "createdAt":"2020-06-18",
+        "tag":"gsap"
     }
 ]
