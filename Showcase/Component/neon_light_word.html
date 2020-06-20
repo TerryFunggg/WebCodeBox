@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Light word</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family:sans-serif;
+            background: url("https://wallpaperplay.com/walls/full/2/7/0/46867.jpg");
+            background-size: cover;
+        }
+
+        .neon {
+            position: absolute;
+            top: 50%;
+            left: 49%;
+            margin: 0;
+            padding: 0 20px;
+            font-size: 6em;
+            transform: translate(-50%,-50%);
+            color: #fff;
+            text-shadow: 0 0 20px #fffb00;
+        }
+
+        .neon::after{
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 0 20px;
+            z-index: -1;
+            color: #fffb00;
+             filter: blur(15px);
+        }
+
+        .neon::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ffe552;
+            z-index: -2;
+            opacity: .5;
+            filter: blur(40px);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="neon" data-text="[Hello_World]">[Hello_World]</h1>
+</body>
+</html>
