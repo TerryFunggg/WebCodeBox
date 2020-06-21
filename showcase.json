@@ -83,5 +83,12 @@
         "link":"./Showcase/Component/neon_light_word.html",
         "createdAt":"2020-06-20",
         "tag":"css"
+    },
+    {
+        "name":"Infinite Scroll",
+        "link":"./Showcase/Infinite_Scroll/index.html",
+        "createdAt":"2020-06-21",
+        "tag":"project"
     }
+
 ]
