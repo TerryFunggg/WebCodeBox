@@ -89,6 +89,12 @@
         "link":"./Showcase/Infinite_Scroll/index.html",
         "createdAt":"2020-06-21",
         "tag":"project"
+    },
+    {
+        "name":"Glowing dots",
+        "link":"./Showcase/Component/glowing_dots.html",
+        "createdAt":"2020-06-22",
+        "tag":"css anim"
     }
 
 ]

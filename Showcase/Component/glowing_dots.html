@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowing Dots</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: #262626;
+        }
+        ul {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        ul li {
+            list-style: none;
+            width: 60px;
+            height: 60px;
+            background: #fff;
+            border-radius: 50%;
+            animation: animate 1.6s ease-in-out infinite;
+        }
+
+        @keyframes animate {
+            0%,40%,100%{
+                transform: scale(0.2);
+            }
+            20%{
+                transform: scale(1);
+            }
+        }
+
+        ul li:nth-child(1){
+            animation-delay: -1.4s;
+            background: #f94144;
+            box-shadow: 0 0 40px #f94144;
+        }
+
+        ul li:nth-child(2){
+            animation-delay: -1.2s;
+            background: #f3722c;
+            box-shadow: 0 0 40px #f3722c;
+        }
+
+        ul li:nth-child(3){
+            animation-delay: -1s;
+            background: #f8961e;
+            box-shadow: 0 0 40px #f8961e;
+        }
+
+        ul li:nth-child(4){
+            animation-delay: -0.8s;
+            background: #f9c74f;
+            box-shadow: 0 0 40px #f9c74f;
+        }
+        ul li:nth-child(5){
+            animation-delay: -0.6s;
+            background: #90be6d;
+            box-shadow: 0 0 40px #90be6d;
+        }
+        ul li:nth-child(6){
+            animation-delay: -0.4s;
+            background: #43aa8b;
+            box-shadow: 0 0 40px #43aa8b;
+        }
+
+        ul li:nth-child(7){
+            animation-delay: -0.2s;
+            background: #577590;
+            box-shadow: 0 0 40px #577590;
+        }
+
+      
+    </style>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
