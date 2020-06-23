@@ -95,6 +95,12 @@
         "link":"./Showcase/Component/glowing_dots.html",
         "createdAt":"2020-06-22",
         "tag":"css anim"
+    },
+    {
+        "name":"Post Card",
+        "link":"./Showcase/Component/cards.html",
+        "createdAt":"2020-06-23",
+        "tag":"component"
     }
 
 ]
