@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Css btn</title>
+    <style>
+        :root {
+            --main-color:#03e9f4;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #000;
+        }
+
+        .loader {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            text-align: center;
+            -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+        }
+
+        .loader p {
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .loader:hover {
+            background: var(--main-color);
+            box-shadow: 0 0 5px var(--main-color),
+                0 0 25px var(--main-color),
+                0 0 50px var(--main-color),
+                0 0 200px var(--main-color);
+            color: #fff;
+        }
+
+        .loader span {
+            position: absolute;
+            display: block;
+            box-shadow: 1px 0px 3px var(--main-color);
+        }
+
+        .loader span:nth-child(2) {
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 40px;
+            background: linear-gradient(90deg, transparent, var(--main-color));
+            animation: animate1 1s linear infinite;
+            animation-delay: 0s;
+        }
+
+        @keyframes animate1 {
+            0% {
+                left: -100%;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+
+        .loader span:nth-child(4) {
+            bottom: 0;
+            left: -100%;
+            width: 100%;
+            height: 40px;
+            background: linear-gradient(270deg, transparent, var(--main-color));
+            animation: animate3 1s linear infinite;
+            animation-delay: 0s;
+        }
+
+        @keyframes animate3 {
+            0% {
+                left: 100%;
+            }
+
+            100% {
+                left: -100%;
+            }
+        }
+
+        .loader span:nth-child(3) {
+            right: 0;
+            top: -100%;
+            width: 40px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, var(--main-color));
+            animation: animate2 1s linear infinite;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes animate2 {
+            0% {
+                top: -100%;
+            }
+
+            100% {
+                top: 100%;
+            }
+        }
+
+        .loader span:nth-child(5) {
+            left: 0;
+            top: 100%;
+            width: 40px;
+            height: 100%;
+            background: linear-gradient(0deg, transparent, var(--main-color));
+            animation: animate4 1s linear infinite;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes animate4 {
+            0% {
+                top: 100%;
+            }
+
+            100% {
+                top: -100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader">
+        <p>Hello!</p>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+
+</html>

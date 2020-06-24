@@ -101,6 +101,12 @@
         "link":"./Showcase/Component/cards.html",
         "createdAt":"2020-06-23",
         "tag":"component"
+    },
+    {
+        "name":"Light btn",
+        "link":"./Showcase/Component/light_btn.html",
+        "createdAt":"2020-06-24",
+        "tag":"css"
     }
 
 ]
