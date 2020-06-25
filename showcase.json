@@ -107,6 +107,12 @@
         "link":"./Showcase/Component/light_btn.html",
         "createdAt":"2020-06-24",
         "tag":"css"
+    },
+    {
+        "name":"Glowing Loading anim",
+        "link":"./Showcase/Component/glowing_loading.html",
+        "createdAt":"2020-06-25",
+        "tag":"css"
     }
 
 ]
