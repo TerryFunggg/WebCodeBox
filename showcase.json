@@ -113,6 +113,12 @@
         "link":"./Showcase/Component/glowing_loading.html",
         "createdAt":"2020-06-25",
         "tag":"css"
+    },
+    {
+        "name":"3D isometric text",
+        "link":"./Showcase/Component/3D_isometric_text.html",
+        "createdAt":"2020-06-26",
+        "tag":"css"
     }
 
 ]
