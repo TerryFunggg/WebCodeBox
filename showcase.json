@@ -119,6 +119,12 @@
         "link":"./Showcase/Component/3D_isometric_text.html",
         "createdAt":"2020-06-26",
         "tag":"css"
+    },
+    {
+        "name":"Neon light 2",
+        "link":"./Showcase/Component/neon_light_2.html",
+        "createdAt":"2020-06-27",
+        "tag":"css"
     }
 
 ]
