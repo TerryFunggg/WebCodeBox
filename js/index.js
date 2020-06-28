@@ -1,78 +1,53 @@
-/*
- * @author: Terry Fung
- * @since: Thursday, 4th June 2020 5:45:22 pm
- */
+const limit = 5;
+let page = 1;
 
-const SHOWCASE_LIMIT = 4;
-
-const showcases_box = document.getElementById("showcases");
-fetchShowcase();
-
-// Get footer year
-document.getElementById("year").innerHTML = new Date().getFullYear();
-
-document.getElementById("refresh").addEventListener("click", function (e) {
-    showcases_box.innerHTML = "";
-    fetchShowcase();
-});
-
-async function fetchShowcase() {
-    // Get project info form showcase.json
-    const response = await fetch("./showcase.json");
-    const data = await response.json();
-
-    const shuffled = shuffleItems(data);
-    const showcases = shuffled.slice(0, SHOWCASE_LIMIT);
-
-    insertShowcase(showcases);
-    initTimeLine(data);
-
-    const collection = document.getElementsByClassName("card");
-
-    // add onClick listener for each showcase
-    addListenerForCards([...collection]);
+// get project from json file
+async function getShowcase(){
+   const res = await fetch('../showcase.json');
+   const showcases = await res.json();
+   return showcases.slice(page - 1 , limit);
+//    TODO: set the limit
 }
 
-function insertShowcase(showcases) {
-    showcases.forEach((item) => {
-        showcases_box.innerHTML += `
-                <div class="col mb-4">
-                    <div class="card box">
-                    <iframe style="border:none; width:100%;height:500px;" class="card-img-top "
-                    src="${item.link}"></iframe>
-                    <div class="card-body">
-                        <h4 class="card-title text-center">${item.name}</h4>
-                    </div>
-                    </div>
-                </div>`;
+// insert project html
+async function addShowcase(){
+    const showcases = await getShowcase();
+    let container = document.querySelector('.container');
+    showcases.forEach(item => {
+        container.innerHTML += `
+        <a href="${item.link}" class="project ${item.tag.includes('project') ? 'span' : 'span'}">
+            <div class="figure">
+                <iframe src="${item.link}" frameborder="0"></iframe>
+                    <div class="caption ${checkTag(item.tag)}">
+                        <h3>${item.name}</h3>
+                    <p class="cta">View Project <i class="fas fa-arrow-right"></i></p>
+                </div>
+            </div>
+    </a>
+        `
     });
 }
 
-function initTimeLine(data) {
-    console.log(data);
-    let list = data
-        .slice()
-        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-    const timeline = document.getElementById("timeline");
-    let html = "";
-
-    for (let index = 0; index < list.length; index++) {
-        let position = "left";
-        let tag = "info";
-
-        if (index % 2 == 0) position = "right";
-        if (list[index].tag.includes("css")) tag = "danger";
-        html += `
-        <div class="timeline-item timeline-item-${position}">
-            <div class="timeline-content">
-                <a href="${list[index].link}"><h4>${list[index].name}</h4></a>
-                <p>post at ${list[index].createdAt}</p>
-                <span class="badge badge-${tag}">${list[index].tag}</span>
-            </div>
-        </div>
-        `;
+function checkTag(tag){
+    if(tag.includes('project')){
+        return 'bg-primary';
+    }else if(tag.includes('css')){
+        return 'bg-secondary'
     }
-    timeline.innerHTML = html;
+}
+
+function showLoading(){
+    const loading = document.querySelector('.loader');
+    loading.classList.add('show');
+
+    setTimeout(() => {
+        loading.classList.remove('show');
+
+        setTimeout(() =>{
+            page++;
+            //TODO: addShowcase();
+        }, 300);
+    }, 1000)
 }
 
 function shuffleItems(data) {
@@ -86,11 +61,12 @@ function shuffleItems(data) {
         .map((x) => x.data);
 }
 
-function addListenerForCards(showcases) {
-    showcases.forEach((element) => {
-        element.addEventListener("click", function () {
-            const iframe = this.childNodes[1];
-            window.location = iframe.src;
-        });
-    });
-}
+window.addEventListener('scroll', ()=> {
+    const {scrollTop, scrollHeight,clientHeight} = document.documentElement;
+    
+    if(scrollTop + clientHeight >= scrollHeight - 5){
+        showLoading();
+    }
+});
+
+addShowcase();

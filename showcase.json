@@ -58,7 +58,7 @@
         "name":"Random walker",
         "link":"./Showcase/Component/p5/random_walker.html",
         "createdAt":"2020-06-16",
-        "tag":"p5"
+        "tag":"project p5"
     },
     {
         "name":"Simple circle loading",
@@ -70,13 +70,13 @@
         "name":"Distortion effect Landing Page",
         "link":"./Showcase/GSAP/Sample1/index.html",
         "createdAt":"2020-06-18",
-        "tag":"gsap"
+        "tag":"project gsap"
     },
     {
         "name":"Product Landing Page 1",
         "link":"./Showcase/GSAP/LandingPage/index.html",
         "createdAt":"2020-06-19",
-        "tag":"gsap"
+        "tag":"project gsap"
     },
     {
         "name":"Neno Light hello world",
@@ -100,7 +100,7 @@
         "name":"Post Card",
         "link":"./Showcase/Component/cards.html",
         "createdAt":"2020-06-23",
-        "tag":"component"
+        "tag":"project component"
     },
     {
         "name":"Light btn",
@@ -127,4 +127,4 @@
         "tag":"css"
     }
 
-]
+] 
