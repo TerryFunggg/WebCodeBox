@@ -137,6 +137,12 @@
         "link":"./Showcase/Component/Forms/login_form.html",
         "createdAt":"2020-06-29",
         "tag":"component project"
+    },
+    {
+        "name":"Home page show case",
+        "link":"./Showcase/project/EdgeLoedgerWebsite_flexbox/index.html",
+        "createdAt":"2020-06-30",
+        "tag":"project"
     }
 
 ] 
