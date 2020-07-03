@@ -149,6 +149,12 @@
         "link":"./Showcase/css/menu_hover_effect.html",
         "createdAt":"2020-07-02",
         "tag":"css"
+    },
+    {
+        "name":"Gradient loader ring",
+        "link":"./Showcase/css/gradient_loader_ring.html",
+        "createdAt":"2020-07-03",
+        "tag":"css"
     }
 
 ] 
