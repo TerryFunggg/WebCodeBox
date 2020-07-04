@@ -155,6 +155,12 @@
         "link":"./Showcase/css/gradient_loader_ring.html",
         "createdAt":"2020-07-03",
         "tag":"css"
+    },
+    {
+        "name":"Sliding button",
+        "link":"./Showcase/css/sliding_btn.html",
+        "createdAt":"2020-07-04",
+        "tag":"css"
     }
 
 ] 
