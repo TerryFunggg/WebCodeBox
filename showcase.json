@@ -161,6 +161,12 @@
         "link":"./Showcase/css/sliding_btn.html",
         "createdAt":"2020-07-04",
         "tag":"css"
+    },
+    {
+        "name":"Pretty List",
+        "link":"./Showcase/Component/Table/pretty_list.html",
+        "createdAt":"2020-07-05",
+        "tag":"css component"
     }
 
 ] 
