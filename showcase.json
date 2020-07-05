@@ -1,68 +1,68 @@
 [
     {
         "name":"Loading animation",
-        "link":"./Showcase/Component/loading.html",
+        "link":"./Showcase/css/loading.html",
         "createdAt":"2020-06-03",
         "tag":"css anim"
     },
     {
         "name":"Word Jumping",
-        "link":"./Showcase/Component/jumping_words.html",
+        "link":"./Showcase/css/jumping_words.html",
         "createdAt":"2020-06-06",
         "tag":"css anim"
 
     },
     {
         "name":"Lofi Music Player",
-        "link":"./Showcase/Music_Player/index.html",
+        "link":"./Showcase/project/Music_Player/index.html",
         "createdAt":"2020-06-09",
         "tag":"project"
     },
     {
         "name":"Neon Light",
-        "link":"./Showcase/Component/neon_light.html",
+        "link":"./Showcase/css/neon_light.html",
         "createdAt":"2020-06-10",
         "tag":"css anim"
     },
     {
         "name":"Hangman Game",
-        "link":"./Showcase/Hangman/index.html",
+        "link":"./Showcase/project/Hangman/index.html",
         "createdAt":"2020-06-11",
         "tag":"project"
     },
     {
         "name":"3D Skewed Button",
-        "link":"./Showcase/Component/3D_Skewed_Button.html",
+        "link":"./Showcase/css/3D_Skewed_Button.html",
         "createdAt":"2020-06-12",
         "tag":"css"
     },
     {
         "name":"Movie selector",
-        "link":"./Showcase/Movie_Selector/index.html",
+        "link":"./Showcase/project/Movie_Selector/index.html",
         "createdAt":"2020-06-13",
         "tag":"project"
     },
     {
         "name":"Flash anim - Hello World",
-        "link":"./Showcase/Component/flash_word.html",
+        "link":"./Showcase/css/flash_word.html",
         "createdAt":"2020-06-14",
         "tag":"css anim"
     },
     {
         "name":"RGB-loading",
-        "link":"./Showcase/Component/RGB_text_effect.html",
+        "link":"./Showcase/css/RGB_text_effect.html",
         "createdAt":"2020-06-15",
         "tag":"css anim"
     },
     {
         "name":"Random walker",
-        "link":"./Showcase/Component/p5/random_walker.html",
+        "link":"./Showcase/p5/random_walker.html",
         "createdAt":"2020-06-16",
         "tag":"project p5"
     },
     {
         "name":"Simple circle loading",
-        "link":"./Showcase/Component/circle_loading.html",
+        "link":"./Showcase/css/circle_loading.html",
         "createdAt":"2020-06-17",
         "tag":"css"
     },
@@ -80,51 +80,93 @@
     },
     {
         "name":"Neno Light hello world",
-        "link":"./Showcase/Component/neon_light_word.html",
+        "link":"./Showcase/css/neon_light_word.html",
         "createdAt":"2020-06-20",
         "tag":"css"
     },
     {
         "name":"Infinite Scroll",
-        "link":"./Showcase/Infinite_Scroll/index.html",
+        "link":"./Showcase/project/Infinite_Scroll/index.html",
         "createdAt":"2020-06-21",
         "tag":"project"
     },
     {
         "name":"Glowing dots",
-        "link":"./Showcase/Component/glowing_dots.html",
+        "link":"./Showcase/css/glowing_dots.html",
         "createdAt":"2020-06-22",
         "tag":"css anim"
     },
     {
         "name":"Post Card",
-        "link":"./Showcase/Component/cards.html",
+        "link":"./Showcase/Component/Cards/cards.html",
         "createdAt":"2020-06-23",
         "tag":"project component"
     },
     {
         "name":"Light btn",
-        "link":"./Showcase/Component/light_btn.html",
+        "link":"./Showcase/css/light_btn.html",
         "createdAt":"2020-06-24",
         "tag":"css"
     },
     {
         "name":"Glowing Loading anim",
-        "link":"./Showcase/Component/glowing_loading.html",
+        "link":"./Showcase/css/glowing_loading.html",
         "createdAt":"2020-06-25",
         "tag":"css"
     },
     {
         "name":"3D isometric text",
-        "link":"./Showcase/Component/3D_isometric_text.html",
+        "link":"./Showcase/css/3D_isometric_text.html",
         "createdAt":"2020-06-26",
         "tag":"css"
     },
     {
         "name":"Neon light 2",
-        "link":"./Showcase/Component/neon_light_2.html",
+        "link":"./Showcase/css/neon_light_2.html",
         "createdAt":"2020-06-27",
         "tag":"css"
+    },
+    {
+        "name":"Neon light Button",
+        "link":"./Showcase/css/neno_light_button.html",
+        "createdAt":"2020-06-28",
+        "tag":"css"
+    },
+    {
+        "name":"Login form",
+        "link":"./Showcase/Component/Forms/login_form.html",
+        "createdAt":"2020-06-29",
+        "tag":"component project"
+    },
+    {
+        "name":"Home page show case",
+        "link":"./Showcase/project/EdgeLoedgerWebsite_flexbox/index.html",
+        "createdAt":"2020-06-30",
+        "tag":"project"
+    },
+    {
+        "name":"Menu Effect",
+        "link":"./Showcase/css/menu_hover_effect.html",
+        "createdAt":"2020-07-02",
+        "tag":"css"
+    },
+    {
+        "name":"Gradient loader ring",
+        "link":"./Showcase/css/gradient_loader_ring.html",
+        "createdAt":"2020-07-03",
+        "tag":"css"
+    },
+    {
+        "name":"Sliding button",
+        "link":"./Showcase/css/sliding_btn.html",
+        "createdAt":"2020-07-04",
+        "tag":"css"
+    },
+    {
+        "name":"Pretty List",
+        "link":"./Showcase/Component/Table/pretty_list.html",
+        "createdAt":"2020-07-05",
+        "tag":"css component"
     }
 
 ] 
