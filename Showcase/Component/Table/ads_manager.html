@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ads manager</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+        integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;600&display=swap" rel="stylesheet">
+    <style>
+
+        :root {
+            --color200:#ffc6ff;
+            --color300:#fdffb6;
+            --color600:#9bf6ff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #1c223b;
+            color: #fff;
+            font-family: 'Source Sans Pro', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #273349;
+            border-radius: 10px;
+            padding: 100px;
+            margin: auto;
+            width: 1000px;
+            box-shadow: 0 5px 10px rgba(12, 16, 31, 0.4);
+        }
+
+        table {
+            color: #e2e2e2;
+            padding: 10px;
+            width: 100%;
+        }
+
+        table th,
+        table td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        table tbody tr {
+            background-color: #1c223b;
+        }
+
+        table tbody tr:hover {
+            background-color: #151b31;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+        }
+
+        table tbody tr td:first-of-type {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        table tbody tr td:last-of-type {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            text-align: center;
+        }
+
+        table tbody tr.priority-200 td:first-of-type {
+            border-left: 5px solid var(--color200);
+        }
+        table tbody tr.priority-300 td:first-of-type {
+            border-left: 5px solid var(--color300);
+        }
+        table tbody tr.priority-600 td:first-of-type {
+            border-left: 5px solid var(--color600);
+        }
+
+        table tbody tr td .fa-circle {
+            transform: scale(0.5);
+        }
+
+        table tbody tr.priority-200 td .fa-circle {
+            color: var(--color200);
+        }
+        table tbody tr.priority-300 td .fa-circle {
+            color: var(--color300);
+        }
+        table tbody tr.priority-600 td .fa-circle {
+            color: var(--color600);
+        }
+
+        .delete {
+            cursor: pointer;
+            background-color: #273349;
+            border: 0;
+            color: #909090;
+            font-size: 16px;
+            padding: 5px 10px;
+        }
+
+        @media (max-width:768px) {
+            .container {
+                padding: 20px;
+            }
+
+            table th:nth-of-type(3),
+            table td:nth-of-type(3),
+            table th:nth-of-type(4),
+            table td:nth-of-type(4),
+            table th:nth-of-type(5),
+            table td:nth-of-type(5){
+                display: none;
+            }
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Clicks</th>
+                    <th>Priority</th>
+                    <th>Impressions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="priority-200">
+                    <td>Shure SE110 in-ear headphones</td>
+                    <td>857</td>
+                    <td><i class="fas fa-circle"></i> 200</td>
+                    <td>190</td>
+                    <td><button class="delete"><i class="fas fa-trash"></i></button></td>
+                </tr>
+                <tr class="priority-600">
+                    <td>Our favorite iPhone Solution</td>
+                    <td>620</td>
+                    <td><i class="fas fa-circle"></i> 600</td>
+                    <td>478</td>
+                    <td><button class="delete"><i class="fas fa-trash"></i></button></td>
+                </tr>
+                <tr class="priority-300">
+                    <td>Audio jack for connecting to your own headphones</td>
+                    <td>500</td>
+                    <td><i class="fas fa-circle"></i> 300</td>
+                    <td>322</td>
+                    <td><button class="delete"><i class="fas fa-trash"></i></button></td>
+                </tr>
+                <tr class="priority-200">
+                    <td>Memory-foam tips</td>
+                    <td>430</td>
+                    <td><i class="fas fa-circle"></i> 200</td>
+                    <td>197</td>
+                    <td><button class="delete"><i class="fas fa-trash"></i></button></td>
+                </tr>
+                <tr class="priority-300">
+                    <td>Cables over the tops</td>
+                    <td>170</td>
+                    <td><i class="fas fa-circle"></i> 300</td>
+                    <td>289</td>
+                    <td><button class="delete"><i class="fas fa-trash"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
