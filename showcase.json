@@ -3,13 +3,13 @@
         "name":"Loading animation",
         "link":"./Showcase/css/loading.html",
         "createdAt":"2020-06-03",
-        "tag":"css anim"
+        "tag":"css"
     },
     {
         "name":"Word Jumping",
         "link":"./Showcase/css/jumping_words.html",
         "createdAt":"2020-06-06",
-        "tag":"css anim"
+        "tag":"css"
 
     },
     {
@@ -22,7 +22,7 @@
         "name":"Neon Light",
         "link":"./Showcase/css/neon_light.html",
         "createdAt":"2020-06-10",
-        "tag":"css anim"
+        "tag":"css"
     },
     {
         "name":"Hangman Game",
@@ -46,19 +46,19 @@
         "name":"Flash anim - Hello World",
         "link":"./Showcase/css/flash_word.html",
         "createdAt":"2020-06-14",
-        "tag":"css anim"
+        "tag":"css"
     },
     {
         "name":"RGB-loading",
         "link":"./Showcase/css/RGB_text_effect.html",
         "createdAt":"2020-06-15",
-        "tag":"css anim"
+        "tag":"css"
     },
     {
         "name":"Random walker",
         "link":"./Showcase/p5/random_walker.html",
         "createdAt":"2020-06-16",
-        "tag":"project p5"
+        "tag":"p5"
     },
     {
         "name":"Simple circle loading",
@@ -70,13 +70,13 @@
         "name":"Distortion effect Landing Page",
         "link":"./Showcase/GSAP/Sample1/index.html",
         "createdAt":"2020-06-18",
-        "tag":"project gsap"
+        "tag":"gsap"
     },
     {
         "name":"Product Landing Page 1",
         "link":"./Showcase/GSAP/LandingPage/index.html",
         "createdAt":"2020-06-19",
-        "tag":"project gsap"
+        "tag":"gsap"
     },
     {
         "name":"Neno Light hello world",
@@ -94,13 +94,13 @@
         "name":"Glowing dots",
         "link":"./Showcase/css/glowing_dots.html",
         "createdAt":"2020-06-22",
-        "tag":"css anim"
+        "tag":"css"
     },
     {
         "name":"Post Card",
         "link":"./Showcase/Component/Cards/cards.html",
         "createdAt":"2020-06-23",
-        "tag":"project component"
+        "tag":"component"
     },
     {
         "name":"Light btn",
@@ -136,7 +136,7 @@
         "name":"Login form",
         "link":"./Showcase/Component/Forms/login_form.html",
         "createdAt":"2020-06-29",
-        "tag":"component project"
+        "tag":"component"
     },
     {
         "name":"Home page show case",
@@ -166,13 +166,13 @@
         "name":"Pretty List",
         "link":"./Showcase/Component/Table/pretty_list.html",
         "createdAt":"2020-07-05",
-        "tag":"css component"
+        "tag":"component"
     },
     {
         "name":"Ads Table",
         "link":"./Showcase/Component/Table/ads_manager.html",
         "createdAt":"2020-07-06",
-        "tag":"css component"
+        "tag":"component"
     }
 
 ] 
