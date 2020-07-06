@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
 body {
     background: #000;
 }
@@ -54,6 +55,79 @@ header{
         0 0 150px #59cd90;
     }
 
+    nav{
+        display: flex;
+        justify-content: center;
+        margin:  0 0 4em;
+    }
+    a.neon_btn {
+        font-family: "Karla";
+        position: relative;
+        padding: 10px 30px;
+        margin: 0 30px;
+        color: #21ebff;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 1rem;
+        transition: 0.5s;
+        overflow: hidden;
+        -webkit-box-reflect: below 1px linear-gradient(transparent,#0003);
+    }
+
+    a.neon_btn:hover {
+        background: #21ebff;
+        color: #fff;
+        box-shadow: 0 0 50px #21ebff;
+        transition-delay: 0.5s;
+    }
+
+    a.neon_btn::before {
+        content: '';
+        border-top: 2px solid #21ebff;
+        border-left: 2px solid#21ebff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        transition: 0.5s;
+        transition-delay: 0.5s;
+    }
+
+    a.neon_btn:hover::before{
+        width: 100%;
+        height: 100%;
+        transition-delay: 0s;
+    }
+
+    a.neon_btn::after {
+        content: '';
+        border-bottom: 2px solid #21ebff;
+        border-right: 2px solid#21ebff;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        transition: 0.5s;
+        transition-delay: 0.5s; 
+    }
+
+    a.neon_btn:hover::after {
+        width: 100%;
+        height: 100%;
+        transition-delay: 0s;
+    }
+
+    a.neon_btn:nth-child(1){
+        filter: hue-rotate(115deg);
+    }
+    a.neon_btn:nth-child(2){
+        filter: hue-rotate(270deg);
+    }
+
+/* showcase */
 .showcase {
     font-weight: 500;
     font-size: 1.6rem;
@@ -193,5 +267,9 @@ header{
 
     .span {
         grid-column: 1 / span 3;
+    }
+
+    a.neon_btn {
+        font-size: 2rem;
     }
 }

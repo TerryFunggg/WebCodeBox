@@ -8,7 +8,7 @@ async function getShowcase() {
     const res = await fetch("../showcase.json");
     const showcases = await res.json();
     return showcases.reverse().slice(page - 1, limit);
-    //    TODO: set the limit
+    //    TODO:  current config : just show newly 5 project in index
 }
 
 // insert project html
@@ -32,10 +32,12 @@ let showcaseTemplate = ( (showcase) => {
 });
 
 function checkTag(tag) {
-    if (tag.includes("project")) 
+    if (tag ==="project") 
         return "bg-primary";
-     if (tag.includes("css")) 
+     if (tag ==="css") 
         return "bg-secondary";
+     if(tag === 'component')
+        return 'bg-success'
 }
 
 function showLoading() {
