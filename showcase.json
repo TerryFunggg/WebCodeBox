@@ -167,6 +167,12 @@
         "link":"./Showcase/Component/Table/pretty_list.html",
         "createdAt":"2020-07-05",
         "tag":"css component"
+    },
+    {
+        "name":"Ads Table",
+        "link":"./Showcase/Component/Table/ads_manager.html",
+        "createdAt":"2020-07-06",
+        "tag":"css component"
     }
 
 ] 
