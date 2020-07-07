@@ -173,6 +173,12 @@
         "link":"./Showcase/Component/Table/ads_manager.html",
         "createdAt":"2020-07-06",
         "tag":"component"
+    },
+    {
+        "name":"Phyllotaxis",
+        "link":"./Showcase/p5/phyllotaxis.html",
+        "createdAt":"2020-07-07",
+        "tag":"p5"
     }
 
 ] 

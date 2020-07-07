@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phyllotaxis</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+    <script>
+        var n = 0;
+        var c = 4;
+
+        function setup(){
+            createCanvas(window.innerWidth, window.innerHeight);
+            angleMode(DEGREES);
+            colorMode(HSB);
+            background(0);
+        }
+
+        function draw(){
+           var a = n * 137.6;
+           var r = c * sqrt(n);
+           var x = r * cos(a) + width / 2;
+           var y = r * sin(a) + height / 2;
+           fill((a - r) % 255,255,255);
+           noStroke();
+           ellipse(x , y, 8 ,8);
+           n++;
+        }
+    </script>
+</body>
+</html>
