@@ -5,7 +5,8 @@ let container = document.querySelector(".container");
 
 // get project from json file
 async function getShowcase() {
-    const res = await fetch("../showcase.json");
+    const res = await fetch("https://terryfunggg.github.io/WebCodeBox/showcase.json");
+    //const res = await fetch("../showcase.json");
     const showcases = await res.json();
     return showcases.reverse().slice(page - 1, limit);
     //    TODO:  current config : just show newly 5 project in index
