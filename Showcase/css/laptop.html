@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: #262626;
+        }
+
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .laptop{
+            width: 340px;
+            height: 200px;
+            background: #000;
+            border: 15px solid #262626;
+            box-shadow: 1px 0 0 #fff,
+                        -1px 0 0 #fff,
+                        0 -1px 0 #fff;
+            overflow: hidden;                        
+        }
+
+        .laptop::before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: -15%;
+            width: 130%;
+            height: 10px;
+            background: #fff;
+            border-top: 2px solid #ccc;
+            border-bottom: 2px solid #ccc;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .laptop::after{
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: #000;
+            left: 50%;
+            top: 6px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="center">
+        <div class="laptop">
+            <img src="https://media.giphy.com/media/12W5Sg2koWYnwA/giphy.gif" alt="">
+        </div>
+    </div>
+</body>
+</html>
