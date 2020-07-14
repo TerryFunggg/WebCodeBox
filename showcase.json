@@ -197,6 +197,12 @@
         "link":"./Showcase/css/laptop.html",
         "createdAt":"2020-07-10",
         "tag":"css"
+    },
+    {
+        "name":"Loading",
+        "link":"./Showcase/css/loading_text.html",
+        "createdAt":"2020-07-14",
+        "tag":"css"
     }
 
 ] 
