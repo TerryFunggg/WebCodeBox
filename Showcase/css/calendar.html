@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;     
+        }
+
+        .bg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://source.unsplash.com/random') no-repeat center center/cover;
+            filter: blur(2px);
+        }
+
+        .calendar {
+            position: relative;
+            width: 200px;
+            background: #fff;
+            text-align: center;
+            border-radius: 8px;
+            overflow: hidden;
+            -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0004);
+            z-index: 10;
+        }
+
+        .calendar #month{
+            position: relative;
+            padding: 5px 10px;
+            background: #ff6331;
+            color: #fff;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .calendar #day{
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: 300;
+            color: #999;
+        }
+
+        .calendar #dayNum{
+            margin-top: 0;
+            line-height: 1em;
+            font-size: 80px;
+            font-weight: 700;
+            color: #333; 
+        }
+
+        .calendar #year {
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: 500;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="calendar">
+        <p id="month"></p>
+        <p id="day"></p>
+        <p id="dayNum"></p>
+        <p id="year"></p>
+    </div>
+
+    <script>
+        const language = navigator.language;
+        let date = new Date();
+
+        let month = date.getMonth();
+        let day = date.toLocaleString(language, {weekday:'long'});
+        let dayNum = date.getDate();
+        let monthName = date.toLocaleString(language,{month:'long'});
+        let year = date.getFullYear();
+
+        document.getElementById('month').innerHTML = monthName;
+        document.getElementById('day').innerHTML = day;
+        document.getElementById('dayNum').innerHTML = dayNum;
+        document.getElementById('year').innerHTML = year;
+        
+    </script>
+</body>
+</html>
