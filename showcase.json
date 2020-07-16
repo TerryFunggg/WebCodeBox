@@ -209,6 +209,12 @@
         "link":"./Showcase/css/calendar.html",
         "createdAt":"2020-07-15",
         "tag":"css"
+    },
+    {
+        "name":"Infinite Stack Card",
+        "link":"./Showcase/Component/Cards/infinite_card_anim.html",
+        "createdAt":"2020-07-16",
+        "tag":"css"
     }
 
 ] 
