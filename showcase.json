@@ -215,6 +215,12 @@
         "link":"./Showcase/Component/Cards/infinite_card_anim.html",
         "createdAt":"2020-07-16",
         "tag":"css"
+    },
+    {
+        "name":"3D media icon",
+        "link":"./Showcase/css/3D_media_icon.html",
+        "createdAt":"2020-07-17",
+        "tag":"css"
     }
 
 ] 
