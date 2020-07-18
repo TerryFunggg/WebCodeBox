@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Card</title>
+    <style>
+     
+        body{
+            background: #14213d;
+        }
+        #price-table{
+            max-width: 1200px;
+            margin: 100px auto;
+            font-family: sans-serif;
+        }
+
+        .price_card {
+            max-width: 400px;
+            background: #fff;
+            display: inline-table;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        .header {
+            color: #fff;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .free .header {
+            background-image: linear-gradient(#ffadad,#ffd6a5);
+        }
+        .person .header {
+            background-image: linear-gradient(#fce65c,#caffbf);
+        }
+        .pro .header {
+            background-image: linear-gradient(#bdb2ff,#ffc6ff);
+        }
+
+        .price {
+            font-size: 60px;
+            font-weight: 300;
+            display: block;
+            text-align: center;
+            padding: 30px 0 10px;
+        }
+
+        .month{
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        .name {
+            font-size: 15px;
+            font-weight: 700;
+            display: block;
+            text-align: center;
+            padding: 0 0 30px;
+        }
+
+        .features {
+            list-style: none;
+            text-align: center;
+            color: #8a8a8a;
+            margin: 0;
+            padding: 0;
+        }
+
+        .features li {
+            margin: 0 35px;
+            padding: 20px 15px;
+            max-width: 300px;
+        }
+
+        .features li:not(:last-child){
+            border: 1px solid #f2f2f2;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+        }
+
+        button {
+            color: #fff;
+            border: 0;
+            height: 60px;
+            width: 100%;
+            display: block;
+            font-weight: 700;
+            font-size: 15px;
+            text-transform: uppercase;
+            margin: 20px 0 0 0;
+            cursor: pointer;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .free button {
+            background: #ffadad;
+        }
+        .person button {
+            background: #fce65c;
+        }
+        .pro button {
+            background: #bdb2ff;
+        }
+    </style>
+</head>
+<body>
+    <div id="price-table">
+        <div class="price_card free">
+            <div class="header">
+                <span class="price">Free</span>
+                <span class="name">Basic</span>
+            </div>
+            <ul class="features">
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+            </ul>
+            <button>Choose Plan</button>
+        </div>
+        <div class="price_card person">
+            <div class="header">
+                <span class="price">Free</span>
+                <span class="name">Basic</span>
+            </div>
+            <ul class="features">
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+            </ul>
+            <button>Choose Plan</button>
+        </div>
+        <div class="price_card pro">
+            <div class="header">
+                <span class="price">Free</span>
+                <span class="name">Basic</span>
+            </div>
+            <ul class="features">
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+            </ul>
+            <button>Choose Plan</button>
+        </div>
+    </div>
+</body>
+</html>
