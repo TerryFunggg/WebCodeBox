@@ -227,6 +227,12 @@
         "link":"./Showcase/css/3D_media_icon.html",
         "createdAt":"2020-07-18",
         "tag":"component"
+    },
+    {
+        "name":"Knockout text",
+        "link":"./Showcase/css/knockout_text.html",
+        "createdAt":"2020-07-19",
+        "tag":"css"
     }
 
 ] 
