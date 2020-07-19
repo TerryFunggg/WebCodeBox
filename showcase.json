@@ -224,7 +224,7 @@
     },
     {
         "name":"Price card",
-        "link":"./Showcase/css/3D_media_icon.html",
+        "link":"./Showcase/Component/Cards/price_card.html",
         "createdAt":"2020-07-18",
         "tag":"component"
     },
