@@ -233,6 +233,12 @@
         "link":"./Showcase/css/knockout_text.html",
         "createdAt":"2020-07-19",
         "tag":"css"
+    },
+    {
+        "name":"Blur hover Card Effect",
+        "link":"./Showcase/Component/Cards/blur_hover_card.html",
+        "createdAt":"2020-07-21",
+        "tag":"component"
     }
 
 ] 
