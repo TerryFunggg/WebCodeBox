@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glitch Effect</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            background: #ffe66d;
+            overflow: hidden;
+        }
+
+        #container {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4em;
+            color: #fff;
+            font-family: sans-serif;
+            letter-spacing: 0.45em;
+        }
+
+        .box{
+            position: absolute;
+            background: #ffe66d;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>JavaScript</h1>
+    </div>
+
+
+    <script>
+        let bg = document.getElementById('container');
+        let count = 20;
+        for(let i = 0; i < count; i++){
+            let glitchBox = document.createElement('div');
+            glitchBox.className = 'box';
+            bg.appendChild(glitchBox);
+        }
+        setInterval(()=>{
+            let glitch = document.getElementsByClassName('box');
+            for (let i = 0; i < glitch.length; i++) {
+                glitch[i].style.left = Math.floor(Math.random() * 100) + 'vw';
+                glitch[i].style.top = Math.floor(Math.random() * 100) + 'vh';
+                glitch[i].style.width = Math.floor(Math.random() * 400) + 'px';
+                glitch[i].style.height = Math.floor(Math.random() * 100) + 'px';
+            }
+    },200);
+            
+        
+    </script>
+</body>
+</html>

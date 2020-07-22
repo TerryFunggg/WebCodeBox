@@ -239,6 +239,12 @@
         "link":"./Showcase/Component/Cards/blur_hover_card.html",
         "createdAt":"2020-07-21",
         "tag":"component"
+    },
+    {
+        "name":"Glitch Effect",
+        "link":"./Showcase/css/Glitch_effect.html",
+        "createdAt":"2020-07-22",
+        "tag":"css"
     }
 
 ] 
